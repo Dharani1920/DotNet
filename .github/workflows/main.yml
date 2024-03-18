@@ -14,7 +14,7 @@ on:
  
 env:
 
-  PROJECT_SLN_File_NAME: GithubCiCdToIIS.sln
+  PROJECT_SLN_File_NAME: DotNet.sln
  
 jobs:
 
