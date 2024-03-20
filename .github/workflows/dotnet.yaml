@@ -6,7 +6,7 @@ on:
     tags:
       - "CoreWebApp-**"
 env:
-  AppName: ${{ startsWith(github.ref, 'refs/tags/CoreWebApp-dev') && 'CoreWebApp_dev' || startsWith(github.ref, 'refs/tags/CoreWebApp-qa') && 'CoreWebApp_qa' || 'CoreWebApp_Prod' }}
+  AppName: ${{ startsWith(github.ref, 'refs/tags/TestApp') && 'TestApp' || startsWith(github.ref, 'refs/tags/TestApp') && 'TestApp' || 'TestApp' }}
 
 jobs:
   build:
