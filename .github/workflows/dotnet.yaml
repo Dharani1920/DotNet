@@ -26,11 +26,11 @@ jobs:
       
     - name: Build
       id: buildstep
-      run: dotnet build GithubCiCdToIIS\GithubCiCdToIIS.csproj --configuration Release --no-restore
+      run: dotnet build WebApplication1\WebApplication1.csproj --configuration Release --no-restore
 
     - name: Project publish
       id: publishstep
-      run: dotnet publish --no-build -c Release GithubCiCdToIIS\GithubCiCdToIIS.csproj -o "${{env.DOTNET_ROOT}}/${{ env.AppName }}"
+      run: dotnet publish --no-build -c Release WebApplication1\WebApplication1.csproj -o "${{env.DOTNET_ROOT}}/${{ env.AppName }}"
     
     - name: Deploy to IIS
       id: deploystep
