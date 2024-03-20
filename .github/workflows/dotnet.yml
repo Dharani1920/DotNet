@@ -47,7 +47,7 @@ jobs:
         }
         
         Start-Sleep -s 15        
-        Copy-Item "${{env.DOTNET_ROOT}}/${{ env.AppName }}/*" "D:\Deployment\${{ env.AppName }}" -Recurse -Force
+        Copy-Item "${{env.DOTNET_ROOT}}/${{ env.AppName }}/*" "D:\${{ env.AppName }}" -Recurse -Force
         
         if ((Get-WebSiteState -Name ${{ env.AppName }}).Value -eq "Stopped")
         {
